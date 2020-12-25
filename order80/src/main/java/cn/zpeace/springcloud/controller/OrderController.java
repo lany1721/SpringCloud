@@ -1,4 +1,4 @@
-package cn.zpeace.springcloud.Controller;
+package cn.zpeace.springcloud.controller;
 
 import cn.zpeace.springcloud.entity.Payment;
 import cn.zpeace.springcloud.entity.ResultVO;

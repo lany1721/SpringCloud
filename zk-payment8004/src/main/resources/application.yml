@@ -1,0 +1,28 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: payment-service
+  #zookeeper
+  cloud:
+    zookeeper:
+      connect-string: 192.168.75.133:2181,192.168.75.136:2181,192.168.75.135:2181
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/spring_cloud?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 980104
+
+# Mybatis-plus
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-unknown-column-behavior: warning
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: cn.zpeace.springcloud.domain.entity
+
+
+
