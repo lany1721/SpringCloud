@@ -18,17 +18,17 @@ import org.springframework.web.client.RestTemplate;
 @RequiredArgsConstructor
 public class OrderController {
 
-    private final String PAYMENT_SERVER = "http://127.0.0.1:8001";
+    private final String PAYMENT_SERVICE = "http://PAYMENT-SERVICE";
 
     private final RestTemplate restTemplate;
 
     @GetMapping("/order/payment")
     public ResultVO<?> create(Payment payment) {
-        return restTemplate.postForObject(PAYMENT_SERVER + "/payment",payment, ResultVO.class);
+        return restTemplate.postForObject(PAYMENT_SERVICE + "/payment",payment, ResultVO.class);
     }
 
     @GetMapping("/order/payment/{id}")
     public ResultVO<?> query(@PathVariable Long id) {
-        return restTemplate.getForObject(PAYMENT_SERVER + "/payment/" + id, ResultVO.class);
+        return restTemplate.getForObject(PAYMENT_SERVICE + "/payment/" + id, ResultVO.class);
     }
 }

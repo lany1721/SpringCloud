@@ -1,8 +1,8 @@
 package cn.zpeace.springcloud.controller;
 
+import cn.zpeace.springcloud.service.PaymentService;
 import cn.zpeace.springcloud.entity.Payment;
 import cn.zpeace.springcloud.entity.ResultVO;
-import cn.zpeace.springcloud.service.PaymentService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -35,7 +35,7 @@ public class PaymentController {
     public ResultVO<?> getPaymentById(@PathVariable Long id) {
         Payment payment = paymentService.getPaymentById(id);
         log.info("******查询成功*****:{}",payment);
-        return ResultVO.success(payment);
+        return ResultVO.success(payment + serverPort);
     }
 
 }
