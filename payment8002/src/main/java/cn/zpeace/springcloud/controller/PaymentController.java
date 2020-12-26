@@ -38,4 +38,9 @@ public class PaymentController {
         return ResultVO.success(payment + serverPort);
     }
 
+    @GetMapping(value = "/payment/lb")
+    public String getPaymentLb() {
+        return serverPort;
+    }
+
 }
