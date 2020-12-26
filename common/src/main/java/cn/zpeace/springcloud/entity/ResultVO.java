@@ -2,12 +2,14 @@ package cn.zpeace.springcloud.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 /**
  * @author zpeace
  * @date 2020/12/24
  */
 @Data
+@Accessors(chain = true)
 @NoArgsConstructor
 public class ResultVO<T> {
     private Integer code;

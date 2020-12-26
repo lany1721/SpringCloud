@@ -17,6 +17,7 @@
         <module>payment8002</module>
         <module>zk-payment8004</module>
         <module>zk-order80</module>
+        <module>feign-order80</module>
     </modules>
 
     <properties>
