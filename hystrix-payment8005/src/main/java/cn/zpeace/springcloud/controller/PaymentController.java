@@ -26,7 +26,14 @@ public class PaymentController {
     }
 
     @GetMapping("/payment/timeout/{id}")
-    public String failure(@PathVariable("id") Long id) {
+    public String timeout(@PathVariable("id") Long id) {
         return paymentService.timeout(id) + serverPort;
+    }
+
+    //====服务熔断
+    @GetMapping("/payment/circuit/{id}")
+    public String paymentCircuitBreaker(@PathVariable("id") Integer id)
+    {
+        return paymentService.paymentCircuitBreaker(id);
     }
 }
