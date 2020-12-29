@@ -21,6 +21,8 @@
         <module>hystrix-payment8005</module>
         <module>hystrix-order80</module>
         <module>hystrix-dashboard9001</module>
+        <module>gateway9527</module>
+        <module>config-server3344</module>
     </modules>
 
     <properties>
