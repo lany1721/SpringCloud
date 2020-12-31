@@ -10,6 +10,18 @@ spring:
         git:
           uri: git@github.com:lany1721/config-server.git
           default-label: main
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+# 暴露bus刷新端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"
+
 eureka:
   client:
     #表示是否将自己注册进EurekaServer默认为true。
