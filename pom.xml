@@ -28,6 +28,12 @@
         <module>stream-provider8801</module>
         <module>stream-consumer8802</module>
         <module>stream-consumer8803</module>
+        <module>alibaba-payment9001</module>
+        <module>alibaba-order83</module>
+        <module>alibaba-config3377</module>
+        <module>alibaba-sentinel8401</module>
+        <module>alibaba-payment9003</module>
+        <module>alibaba-order84</module>
     </modules>
 
     <properties>
